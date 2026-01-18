@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中矿集团铊矿采矿系统 - UI/UX 项目详情</title>
+    <!-- Tailwind CSS (用于快速构建现代UI) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome (图标) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: #0B0E14; /* 深邃黑蓝背景 */
+            color: #E2E8F0;
+        }
+        
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0E14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* 占位符图片样式 */
+        .img-placeholder {
+            background-image: repeating-linear-gradient(45deg, #1e293b 0, #1e293b 10px, #0f172a 0, #0f172a 20px);
+            border: 2px dashed #475569;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #94a3b8;
+            transition: all 0.3s ease;
+        }
+        .img-placeholder:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+        /* 玻璃拟态效果 */
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* 强调色渐变 */
+        .text-gradient {
+            background: linear-gradient(to right, #38bdf8, #4ade80);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- 顶部导航 -->
+    <nav class="fixed top-0 w-full z-50 glass-card border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" onclick="history.back()" class="text-gray-400 hover:text-white transition flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> 返回作品集
+                </a>
+                <div class="text-sm font-bold tracking-wider text-gray-500">UI/UX PORTFOLIO</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero 区域 -->
+    <header class="relative pt-32 pb-20 overflow-hidden">
+        <!-- 背景装饰光斑 -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-cyan-900/20 rounded-full blur-[100px] -z-10"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-cyan-400 uppercase bg-cyan-900/30 rounded-full border border-cyan-800">
+                B端 · 数字孪生 · WebGL
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                中矿集团<span class="text-gradient">铊矿采矿系统</span>
+            </h1>
+            <p class="text-xl text-gray-400 mb-8 font-light max-w-2xl mx-auto">
+                基于 WebGL 技术的矿山数字孪生平台。将复杂的井下传感器数据转化为直观的 3D 可视化界面，降低安全监控的认知负荷，提升调度效率。
+            </p>
+            
+            <!-- 核心数据展示 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 border-t border-gray-800 pt-8">
+                <div>
+                    <div class="text-2xl font-bold text-white">24/7</div>
+                    <div class="text-xs text-gray-500 uppercase mt-1">实时监控</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-white">3D</div>
+                    <div class="text-xs text-gray-500 uppercase mt-1">空间可视化</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-white">-40%</div>
+                    <div class="text-xs text-gray-500 uppercase mt-1">认知负荷</div>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold text-white">WebGL</div>
+                    <div class="text-xs text-gray-500 uppercase mt-1">技术栈</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="max-w-4xl mx-auto px-6 pb-24 space-y-24">
+
+        <!-- 1. 项目背景与目标 -->
+        <section id="background">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-cyan-500 text-lg font-mono">01.</span>
+                <h2 class="text-2xl font-bold text-white">项目背景与目标</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-6 rounded-xl border-l-4 border-red-500">
+                    <h3 class="text-lg font-semibold text-white mb-3"><i class="fa-solid fa-triangle-exclamation mr-2 text-red-500"></i>挑战</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        铊矿开采环境极其复杂，井下传感器数据量庞大且维度单一（纯数值表格）。传统的监控系统导致调度员在面对紧急情况时，难以快速构建空间认知，决策效率低下。
+                    </p>
+                </div>
+                <div class="glass-card p-6 rounded-xl border-l-4 border-green-500">
+                    <h3 class="text-lg font-semibold text-white mb-3"><i class="fa-solid fa-bullseye mr-2 text-green-500"></i>目标</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li class="flex items-start"><i class="fa-solid fa-check mt-1 mr-2 text-green-500 text-xs"></i> <span>利用 WebGL 构建 1:1 矿井数字孪生模型。</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check mt-1 mr-2 text-green-500 text-xs"></i> <span>通过 UI 视觉层级整理，降低认知负荷。</span></li>
+                        <li class="flex items-start"><i class="fa-solid fa-check mt-1 mr-2 text-green-500 text-xs"></i> <span>缩短从“发现异常”到“下达指令”的时间。</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. 角色与流程 -->
+        <section id="role">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-cyan-500 text-lg font-mono">02.</span>
+                <h2 class="text-2xl font-bold text-white">角色职责与设计流程</h2>
+            </div>
+            <div class="bg-slate-900/50 rounded-xl p-8 border border-slate-800">
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <span class="px-3 py-1 bg-slate-800 rounded text-sm text-cyan-400">我的角色：UI/UX 设计师 (主导)</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-sm text-gray-300">Figma</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-sm text-gray-300">Blender</span>
+                    <span class="px-3 py-1 bg-slate-800 rounded text-sm text-gray-300">WebGL</span>
+                </div>
+                <!-- 简单的流程图 -->
+                <div class="relative flex justify-between items-center text-center">
+                    <div class="absolute top-1/2 left-0 w-full h-0.5 bg-slate-800 -z-10 -translate-y-1/2"></div>
+                    
+                    <div class="bg-slate-900 px-2">
+                        <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center mx-auto mb-2 text-cyan-500"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <div class="text-sm font-medium">发现</div>
+                        <div class="text-xs text-gray-500 mt-1">环境调研</div>
+                    </div>
+                    <div class="bg-slate-900 px-2">
+                        <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center mx-auto mb-2 text-cyan-500"><i class="fa-regular fa-map"></i></div>
+                        <div class="text-sm font-medium">定义</div>
+                        <div class="text-xs text-gray-500 mt-1">报警分级</div>
+                    </div>
+                    <div class="bg-slate-900 px-2">
+                        <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center mx-auto mb-2 text-cyan-500"><i class="fa-solid fa-pen-ruler"></i></div>
+                        <div class="text-sm font-medium">构思</div>
+                        <div class="text-xs text-gray-500 mt-1">HUD布局</div>
+                    </div>
+                    <div class="bg-slate-900 px-2">
+                        <div class="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center mx-auto mb-2 text-cyan-500"><i class="fa-solid fa-code"></i></div>
+                        <div class="text-sm font-medium">交付</div>
+                        <div class="text-xs text-gray-500 mt-1">开发对接</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 用户调研 -->
+        <section id="research">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-cyan-500 text-lg font-mono">03.</span>
+                <h2 class="text-2xl font-bold text-white">用户与需求调研</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-slate-800/40 p-6 rounded-lg">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center text-blue-400 text-xl">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">安全调度员</h4>
+                            <p class="text-xs text-gray-400">高频使用者</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-300 italic">“数据太多看不过来，不知道报警的传感器具体在哪里。”</p>
+                    <div class="mt-4 text-xs bg-red-500/10 text-red-400 inline-block px-2 py-1 rounded">痛点：视觉疲劳、空间定位难</div>
+                </div>
+
+                <div class="bg-slate-800/40 p-6 rounded-lg">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-purple-600/20 rounded-full flex items-center justify-center text-purple-400 text-xl">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">矿区管理者</h4>
+                            <p class="text-xs text-gray-400">宏观决策者</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-300 italic">“我需要一眼看到今天的产能和整体安全态势。”</p>
+                    <div class="mt-4 text-xs bg-red-500/10 text-red-400 inline-block px-2 py-1 rounded">痛点：缺乏宏观数据聚合</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. 产品结构图 (占位符) -->
+        <section id="structure">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-cyan-500 text-lg font-mono">04.</span>
+                <h2 class="text-2xl font-bold text-white">产品结构图</h2>
+            </div>
+            <!-- 图片占位符 -->
+            <!-- 将来替换为: <img src="IA_Mining_System_Structure.png" alt="产品结构图" class="w-full rounded-lg shadow-lg"> -->
+            <div class="img-placeholder h-96 w-full rounded-xl">
+                <i class="fa-solid fa-sitemap text-4xl mb-4"></i>
+                <span class="font-mono text-sm bg-black/50 px-3 py-1 rounded">IA_Mining_System_Structure.png</span>
+                <span class="text-xs mt-2 text-gray-500">此处展示：全景概览、实时监控、设备管理等层级关系</span>
+            </div>
+        </section>
+
+        <!-- 5. 交互设计方案 (核心) -->
+        <section id="interaction">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-cyan-500 text-lg font-mono">05.</span>
+                <h2 class="text-2xl font-bold text-white">交互设计方案展示</h2>
+            </div>
+            
+            <!-- 图片占位符：交互演示缩略图 -->
+            <!-- 将来替换为: <img src="Interaction_Demo_Thumbnail.gif" alt="交互演示" class="w-full rounded-lg shadow-lg"> -->
+            <div class="img-placeholder h-[400px] w-full rounded-xl border border-slate-700 bg-slate-900/50">
+                <i class="fa-solid fa-film text-4xl mb-4 text-cyan-500"></i>
+                <span class="font-mono text-sm bg-black/50 px-3 py-1 rounded">Interaction_Demo_Thumbnail.gif</span>
+                <span class="text-xs mt-2 text-gray-500">此处展示：空间漫游、数据穿透等关键交互动画 (建议使用 GIF)</span>
+            </div>
+
+            <!-- 交互亮点说明 -->
+            <div class="grid grid-cols-2 gap-4 mt-6">
+                <div class="p-4 border border-slate-700 rounded-lg">
+                    <h4 class="text-cyan-400 font-bold mb-2">01. 空间漫游</h4>
+                    <p class="text-xs text-gray-400">支持缩放、旋转、平移的 3D 视角，快速定位井下任意坐标。</p>
+                </div>
+                <div class="p-4 border border-slate-700 rounded-lg">
+                    <h4 class="text-cyan-400 font-bold mb-2">02. 数据穿透</h4>
+                    <p class="text-xs text-gray-400">鼠标悬停（Hover）在具体设备上时，即时浮层显示温度、瓦斯浓度等关键指标。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. UI 组件展示 (占位符) -->
+        <section id="ui-components">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-cyan-500 text-lg font-mono">06.</span>
+                <h2 class="text-2xl font-bold text-white">UI 组件展示</h2>
+            </div>
+            <p class="text-gray-400 mb-6 text-sm">设计语言：采用 HUD 风格，半透明毛玻璃背景，配合高饱和度的数据色（荧光绿、警示红）以适应暗色环境。</p>
+            
+            <!-- 图片占位符 -->
+            <!-- 将来替换为: <img src="UI_StyleGuide_Components.png" alt="UI组件展示" class="w-full rounded-lg shadow-lg"> -->
+            <div class="img-placeholder h-[600px] w-full rounded-xl">
+                <i class="fa-solid fa-layer-group text-4xl mb-4"></i>
+                <span class="font-mono text-sm bg-black/50 px-3 py-1 rounded">UI_StyleGuide_Components.png</span>
+                <span class="text-xs mt-2 text-gray-500">此处展示：色彩规范、字体、仪表盘、波形图、弹窗样式</span>
+            </div>
+        </section>
+
+        <!-- 7. 成果与影响 -->
+        <section id="impact">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-cyan-500 text-lg font-mono">07.</span>
+                <h2 class="text-2xl font-bold text-white">设计成果与影响</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <div class="text-3xl font-bold text-green-400 mb-2">40%</div>
+                    <p class="text-sm text-gray-300">异常定位时间缩短</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <div class="text-3xl font-bold text-blue-400 mb-2">High</div>
+                    <p class="text-sm text-gray-300">用户培训效率提升</p>
+                </div>
+                <div class="glass-card p-6 rounded-xl text-center">
+                    <div class="text-3xl font-bold text-purple-400 mb-2">Down</div>
+                    <p class="text-sm text-gray-300">关键指令误操作率</p>
+                </div>
+            </div>
+            <blockquote class="mt-6 border-l-4 border-cyan-600 pl-4 py-2 italic text-gray-400 bg-slate-900/50 rounded-r">
+                "现在的界面像玩游戏一样直观，新员工培训上手速度明显变快了。" —— 矿区安全主管
+            </blockquote>
+        </section>
+
+        <!-- 8. 总结与反思 -->
+        <section id="summary" class="mb-20">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-cyan-500 text-lg font-mono">08.</span>
+                <h2 class="text-2xl font-bold text-white">总结与反思</h2>
+            </div>
+            <div class="bg-slate-900 rounded-xl p-8 border border-gray-800">
+                <div class="mb-6">
+                    <h4 class="text-white font-bold mb-2">🔧 挑战</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        平衡 WebGL 的渲染性能与 UI 的精细度是最大的挑战。我们通过简化非核心区域的 3D 模型面数，保证了系统在浏览器端的流畅运行。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-2">🌱 成长</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        深入理解了 B 端工业软件如何通过“设计”赋能“业务”，让数据不仅可见，而且可用。这个项目也让我对大数据可视化的交互模式有了更深的积累。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 底部 -->
+    <footer class="border-t border-gray-800 py-12 text-center text-gray-500 text-sm bg-black">
+        <p>&copy; 2024 Design Portfolio. All Rights Reserved.</p>
+        <p class="mt-2">Project: 中矿集团铊矿采矿系统</p>
+    </footer>
+
+</body>
+</html>
